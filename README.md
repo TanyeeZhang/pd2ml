@@ -10,7 +10,7 @@
 
 To make a digression, the name pd2ml can be pronounced as pudumal (/'pudumɔ:/), which is a homonym for purdy cat in Chinese, and this is also the inspiration for the logo of this package.
 
-## Where to get it
+## How to get it
 
 You can install using the pip package manager by running
 ```sh
