@@ -95,15 +95,15 @@ To estimate the performance of pd2ml, I did a preliminary rough test on my lapto
 
 I created a table named stock, this table has 6 fields, of which 2 primary keys, 3 indexes. Then
 
-- Use pd2ml and multi-value insert SQL (`INSERT INTO ... VALUES (), () ...`) to insert 10000/100000/1000000 records into the empty table respectively, the time-consuming is shown in the figure
+- Use pd2ml and multi-value insert SQL (`INSERT INTO ... VALUES (), () ...`) to insert 10000/100000/1000000 records 10 times into the empty table respectively, the average elapsed time is shown in the figure
 
 ![compare_1](https://user-images.githubusercontent.com/32212649/89024505-ce997380-d357-11ea-99c5-86049a12fe7d.png)
 
-- Use p2dml and multi-value replace SQL (`REPLACE INTO ... VALUES (), () ...`) to insert 10000/100000/1000000 records into the non-empty table, as shown in the figure
+- Use p2dml and multi-value replace SQL (`REPLACE INTO ... VALUES (), () ...`) to insert 10000/100000/1000000 records 10 times into the non-empty table, the average elapsed time is shown in the figure
 
 ![compare_2](https://user-images.githubusercontent.com/32212649/89024771-38198200-d358-11ea-948f-5993fc5095e5.png)
 
-- Use pd2ml and pandas native method `read_sql_table` to read 10000/100000/1000000 records from the table as DATAFRAME, as shown in the figure
+- Use pd2ml and pandas native method `read_sql_table` to read 10000/100000/1000000 records 10 times from the table as DATAFRAME, the average elapsed time is shown in the figure
 
 ![compare_3](https://user-images.githubusercontent.com/32212649/89024806-48316180-d358-11ea-963d-6c29cefc14a7.png)
 
