@@ -87,9 +87,9 @@ To estimate the performance of pd2ml, I did a preliminary rough test on my lapto
 
 #### Test Environment
 
-- MYSQL 5.7
-- WINDOWS 10
-- Thinkpad of 4 cores and 8G RAM
+- MySQL 5.7
+- Windows 10
+- ThinkPad of 4 cores and 8G RAM
 
 #### Test Content
 
