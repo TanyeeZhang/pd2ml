@@ -72,7 +72,7 @@ with Loader(engine):
         result = pool.apply_async(load_from_, (table, get_engine, ))
         result_arr.append(result)
 ```
-For more details about examples, please see here.
+For more details about examples, please see [here](https://github.com/TanyeeZhang/pd2ml/tree/master/examples).
 
 ## Tips
 
