@@ -48,7 +48,7 @@ print(df)
 ```
 In particular, it supports pandas extension, so you can also use it like this
 ```python
-from pd2ml import loader_ext
+import pd2ml
 # Call it directly just like any other DataFrame's native methods.
 # load to db
 df.load_to('stock', engine)
@@ -83,7 +83,7 @@ To ensure that pd2ml works well, here are some tips and suggestions
 
 ## Performance
 
-To estimate the performance of PD2ML, I did a preliminary rough test on my laptop.
+To estimate the performance of pd2ml, I did a preliminary rough test on my laptop.
 
 #### Test Environment
 
@@ -105,7 +105,7 @@ I created a table named stock, this table has 6 fields, of which 2 primary keys,
 
 - Use pd2ml and pandas native method `read_sql_table` to read 10000/100000/1000000 records from the table as DATAFRAME, as shown in the figure
 
-![compare_2](https://user-images.githubusercontent.com/32212649/89024806-48316180-d358-11ea-963d-6c29cefc14a7.png)
+![compare_3](https://user-images.githubusercontent.com/32212649/89024806-48316180-d358-11ea-963d-6c29cefc14a7.png)
 
 #### Conclusion
 
