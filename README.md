@@ -91,7 +91,7 @@ To estimate the performance of pd2ml, I did a preliminary rough test on my lapto
 - Windows 10
 - ThinkPad of 4 cores and 8G RAM
 
-#### Test Content
+#### Test Items
 
 I created a table named stock, this table has 6 fields, of which 2 primary keys, 3 indexes. Then
 
