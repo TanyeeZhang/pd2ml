@@ -31,8 +31,8 @@ It is veary easy to get started and easy to use.
 Firstly, start by reading a csv file into your pandas DataFrame, e.g. by using
 ```python
 import pandas as pd
-import sqlalchemy
-engine = sqlalchemy.create_engine('mysql+pymysql://username:password@localhost:3306/db?charset=utf8&local_infile=1')
+import sqlalchemy as sa
+engine = sa.create_engine('mysql+pymysql://username:password@localhost:3306/db?charset=utf8&local_infile=1')
 df = pd.read_csv('stock.csv')
 ```
 To upload `df` to database, run
