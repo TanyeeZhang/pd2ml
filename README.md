@@ -19,8 +19,9 @@ pip install pd2ml
 Note that it is necessary for pd2ml to run in the `Python3` environment.
 
 ## Examples
+It is veary easy to get started and easy to use.
 
-Start by reading a csv file into your pandas DataFrame, e.g. by using
+Firstly, start by reading a csv file into your pandas DataFrame, e.g. by using
 ```python
 import pandas as pd
 import sqlalchemy
@@ -70,9 +71,35 @@ For more details about examples, please see here.
 
 To ensure that pd2ml works well, here are some tips and suggestions
 - It is essential to add parameters `infile_local=1` when connecting to the database
-- To make sure it works, `secure-file-priv=""`
-- innodb_buffer_pool_size
+- To make sure pd2ml works, it must be set `secure-file-priv=""` in MySQL configuration file `my.ini` or `my.cnf`
+- Meanwhile, to maximize efficiency, the value `innodb_buffer_pool_size` may be adjusted appropriately in configuration file
 
 ## Performance
 
+To estimate the performance of PD2ML, I did a preliminary rough test on my laptop.
 
+### Test Environment
+
+- MYSQL 5.7
+- WINDOWS 10
+- Thinkpad of 4 cores and 8G RAM
+
+### Test Content
+
+I created a table named stock, this table has 6 fields, of which 2 primary keys, 3 indexes. Then
+
+- Use pd2ml and multi-value insertion methods (`INSERT INTO ... VALUES (), () ...`) to insert 10000/100000/1000000 records into the empty table respectively, the time-consuming is shown in the figure
+
+![compare_1](https://user-images.githubusercontent.com/32212649/89024505-ce997380-d357-11ea-99c5-86049a12fe7d.png)
+
+- Use p2dml and multi-value replacement methods (`REPLACE INTO ... VALUES (), () ...`) to insert 10000/100000/1000000 records into the non-empty table, as shown in the figure
+
+![compare_2](https://user-images.githubusercontent.com/32212649/89024771-38198200-d358-11ea-948f-5993fc5095e5.png)
+
+- Use pd2ml and pandas native method `read_sql_table` to read 10000/100000/1000000 records from the table as DATAFRAME, as shown in the figure
+
+![compare_2](https://user-images.githubusercontent.com/32212649/89024806-48316180-d358-11ea-963d-6c29cefc14a7.png)
+
+### Conclusion
+
+As the amount of data increases, the speed advantage of pd2ml becomes more and more obvious. The efficiency of writing into the database is at least 20% faster, and reading from the databse is improved three to four times.
