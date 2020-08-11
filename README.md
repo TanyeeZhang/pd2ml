@@ -6,7 +6,7 @@
 
 ## What is it?
 
-**pd2ml** (**p**andas **D**ataFrame **to** **M**ySQL **L**oader) is a Python package that provides an efficient way to upload Pandas `DataFrame` to `MySQL` and download from the database table into a DataFrame. The application of MySQL statements `LOAD DATA LOCAL INFILE` and `SELECT INTO OUTILE` are the most essential reason for such efficient upload and download.It turns out that the advantages of pd2ml will gradually become apparent as the amount of data increases, so it will be a good assistant when dealing with massive amounts of data.
+**pd2ml** (**p**andas **D**ataFrame **to** **M**ySQL **L**oader) is a Python package that provides an efficient way to upload pandas `DataFrame` to `MySQL` and download from the database table into a DataFrame. The application of MySQL statements `LOAD DATA LOCAL INFILE` and `SELECT INTO OUTILE` are the most essential reason for such efficient upload and download.It turns out that the advantages of pd2ml will gradually become apparent as the amount of data increases, so it will be a good assistant when dealing with massive amounts of data.
 
 To make a digression, the name pd2ml can be pronounced as pudumal (/'pudumɔ:/), which is a homonym for purdy cat in Chinese, and this is also the inspiration for the logo of this package.
 
