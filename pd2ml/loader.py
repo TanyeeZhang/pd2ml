@@ -26,7 +26,7 @@ class UpLoader:
     def __init__(self, engine: sqlalchemy.engine = None):
         """
         Args:
-            engine (sqlalchemy.base.Engine): engine instance by `create_engine` function
+            engine (sqlalchemy.base.Engine): engine instance by `create_engine` function.
         Notes:
             The string form of the URL in ` create_engine` is
             dialect[+driver]://user:password@host/dbname[?key=value..]
